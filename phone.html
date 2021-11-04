@@ -1,0 +1,137 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animated SVG Phone based on Fireship Tutorial</title>
+    <!-- see https://www.youtube.com/watch?v=UTHgr6NLeEw for tutorial -->
+
+    <style>
+      #skeleton {
+        animation: fadeInUp 1s;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #bolt g {
+        opacity: 0;
+        animation: dropIn 8s ease forwards;
+        animation-delay: calc(var(--order) * 200ms);
+      }
+
+      @keyframes dropIn {
+        10% {
+          opacity: 0;
+          transform: translateY(-10%); 
+        }
+        20%, 100% {
+          opacity: 1;
+          transform: translateY(0); 
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="169" height="229" viewBox="0 0 169 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="phone">
+      <g id="phone_2" filter="url(#filter0_d_1:2)">
+      <rect x="13" y="10" width="123" height="204" rx="14" fill="#F4F4F4"/>
+      </g>
+      <g id="skeleton">
+      <circle id="Ellipse 1" cx="36" cy="33" r="8" fill="#C4C4C4"/>
+      <g id="hamburgerGroup">
+      <rect id="hamburgerBot" x="106" y="38" width="16" height="3" fill="#C4C4C4"/>
+      <rect id="hamburgerMid" x="106" y="32" width="16" height="3" fill="#C4C4C4"/>
+      <rect id="hamburgerTop" x="106" y="26" width="16" height="3" fill="#C4C4C4"/>
+      </g>
+      <g id="TextGroup">
+      <rect id="text6" x="88" y="75" width="34" height="9" fill="#C4C4C4"/>
+      <rect id="text5" x="53" y="75" width="31" height="9" fill="#C4C4C4"/>
+      <rect id="text4" x="28" y="75" width="21" height="9" fill="#C4C4C4"/>
+      <rect id="text3" x="91" y="62" width="31" height="9" fill="#C4C4C4"/>
+      <rect id="text2" x="66" y="62" width="22" height="9" fill="#C4C4C4"/>
+      <rect id="text1" x="28" y="62" width="34" height="9" fill="#C4C4C4"/>
+      </g>
+      <g id="photo4">
+      <mask id="mask0_1:2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="77" y="158" width="44" height="26">
+      <rect id="Rectangle 13" x="77" y="158" width="44" height="26" rx="2" fill="#DADADA"/>
+      </mask>
+      <g mask="url(#mask0_1:2)">
+      <rect id="Rectangle 15" x="77" y="158" width="44" height="26" rx="2" fill="#DADADA"/>
+      <path id="Vector 1" d="M77 175.5V184H121V175.5L110.5 170.4L101.5 175.5L89 167L77 175.5Z" fill="#9C9A9A"/>
+      </g>
+      </g>
+      <g id="photo3">
+      <mask id="mask1_1:2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="28" y="158" width="44" height="26">
+      <rect id="Rectangle 13_2" x="28" y="158" width="44" height="26" rx="2" fill="#DADADA"/>
+      </mask>
+      <g mask="url(#mask1_1:2)">
+      <rect id="Rectangle 15_2" x="28" y="158" width="44" height="26" rx="2" fill="#DADADA"/>
+      <path id="Vector 1_2" d="M28 175.5V184H72V175.5L61.5 170.4L52.5 175.5L40 167L28 175.5Z" fill="#9C9A9A"/>
+      </g>
+      </g>
+      <g id="photo2">
+      <mask id="mask2_1:2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="78" y="126" width="44" height="26">
+      <rect id="Rectangle 13_3" x="78" y="126" width="44" height="26" rx="2" fill="#DADADA"/>
+      </mask>
+      <g mask="url(#mask2_1:2)">
+      <rect id="Rectangle 15_3" x="78" y="126" width="44" height="26" rx="2" fill="#DADADA"/>
+      <path id="Vector 1_3" d="M78 143.5V152H122V143.5L111.5 138.4L102.5 143.5L90 135L78 143.5Z" fill="#9C9A9A"/>
+      </g>
+      </g>
+      <g id="photo1">
+      <mask id="mask3_1:2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="28" y="126" width="44" height="26">
+      <rect id="Rectangle 13_4" x="28" y="126" width="44" height="26" rx="2" fill="#DADADA"/>
+      </mask>
+      <g mask="url(#mask3_1:2)">
+      <rect id="Rectangle 15_4" x="28" y="126" width="44" height="26" rx="2" fill="#DADADA"/>
+      <path id="Vector 1_4" d="M28 143.5V152H72V143.5L61.5 138.4L52.5 143.5L40 135L28 143.5Z" fill="#9C9A9A"/>
+      </g>
+      </g>
+      <rect id="buttonCenter" x="36" y="96" width="76" height="18" rx="6" fill="#C4C4C4"/>
+      </g>
+      <g id="bolt">
+      <g id="boltBig" style="--order: 1">
+      <rect id="buttonCenter_2" x="36" y="94" width="76" height="18" rx="6" fill="#66FF63"/>
+      <path id="Vector 2" d="M77.5 98.5H73.5L68 105H72.5L70 109.5L76 103.5H72.5L77.5 98.5Z" fill="#EAFFEA"/>
+      </g>
+      <g id="bolt4" style="--order: 5">
+      <circle id="Ellipse 2" cx="118.5" cy="159.5" r="7.5" fill="#66FF63"/>
+      <path id="Vector 2_2" d="M122.5 154H118.5L113 160.5H117.5L115 165L121 159H117.5L122.5 154Z" fill="#EAFFEA"/>
+      </g>
+      <g id="bolt3" style="--order: 4">
+      <circle id="Ellipse 2_2" cx="69.5" cy="159.5" r="7.5" fill="#66FF63"/>
+      <path id="Vector 2_3" d="M73.5 154H69.5L64 160.5H68.5L66 165L72 159H68.5L73.5 154Z" fill="#EAFFEA"/>
+      </g>
+      <g id="bolt2" style="--order: 3">
+      <circle id="Ellipse 2_3" cx="119.5" cy="127.5" r="7.5" fill="#66FF63"/>
+      <path id="Vector 2_4" d="M123.5 122H119.5L114 128.5H118.5L116 133L122 127H118.5L123.5 122Z" fill="#EAFFEA"/>
+      </g>
+      <g id="bolt1" style="--order: 2">
+      <circle id="Ellipse 2_4" cx="69.5" cy="127.5" r="7.5" fill="#66FF63"/>
+      <path id="Vector 2_5" d="M73.5 122H69.5L64 128.5H68.5L66 133L72 127H68.5L73.5 122Z" fill="#EAFFEA"/>
+      </g>
+      </g>
+      </g>
+      <defs>
+      <filter id="filter0_d_1:2" x="9" y="10" width="131" height="212" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1:2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1:2" result="shape"/>
+      </filter>
+      </defs>
+    </svg>
+  </body>
+</html>
