@@ -1,0 +1,20 @@
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+
+  /* idea 1 - manual columns
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /**/
+
+  /* idea 2 - clean up code
+  grid-template-columns: repeat(12, 1fr);
+  /**/
+
+  /* idea 3 - better sizing but overvlows
+  grid-template-columns: repeat(12, minmax(240px, 1fr));
+  /**/
+
+  /* idea 4 (final) - auto-fit */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /**/
+}
