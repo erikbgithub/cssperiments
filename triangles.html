@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animated SVG Button based on Fireship Tutorial</title>
+    <!-- see https://www.youtube.com/watch?v=UTHgr6NLeEw for tutorial -->
+
+    <style>
+      :root {
+        --dark-color: #635bff;
+        --light-color: #80e9ff;
+      }
+
+      svg {
+        cursor: pointer;
+      }
+
+      #darkGroup {
+        fill: var(--dark-color);
+      }
+
+      #lightGroup {
+        fill: var(--light-color);
+      }
+
+      #dark1, #light1, #dark2 {
+        transition: all 1s ease;
+      }
+
+      #dark2 {
+        transform: translateX(-100%);
+      }
+
+      svg:hover #light1 {
+        transform: translateX(20%);
+      }
+
+      svg:hover #dark1 {
+        transform: translateX(40%);
+        opacity: 0;
+      }
+
+      svg:hover #dark2 {
+        transform: translateX(0%);
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="triangles">
+        <g id="lightGroup">
+          <path id="light1" d="M52 48.7679C53.3333 49.5377 53.3333 51.4623 52 52.2321L18.25 71.7176C16.9167 72.4874 15.25 71.5252 15.25 69.9856L15.25 31.0144C15.25 29.4748 16.9167 28.5126 18.25 29.2824L52 48.7679Z" />
+        </g>
+        <g id="darkGroup">
+          <path id="dark1" d="M78 47.7679C79.3333 48.5377 79.3333 50.4623 78 51.2321L44.25 70.7176C42.9167 71.4874 41.25 70.5252 41.25 68.9856L41.25 30.0144C41.25 28.4748 42.9167 27.5126 44.25 28.2824L78 47.7679Z"  />
+          <path id="dark2" d="M52 48.7679C53.3333 49.5377 53.3333 51.4623 52 52.2321L18.25 71.7176C16.9167 72.4874 15.25 71.5252 15.25 69.9856L15.25 31.0144C15.25 29.4748 16.9167 28.5126 18.25 29.2824L52 48.7679Z"  />
+        </g>
+      </g>
+    </svg>
+
+    <script>
+      const svg = document.getElementById('triangles');
+      svg.onclick = (e) => {
+        const colors = ['red', 'blue', 'green', 'orange', 'pink', 'purple'];
+        const rando = () => colors[Math.floor(Math.random() * colors.length)];
+        document.documentElement.style.cssText = `
+        --dark-color: ${rando()};
+        --light-color: ${rando()};
+        `
+      }
+    </script>
+  </body>
+</html>
